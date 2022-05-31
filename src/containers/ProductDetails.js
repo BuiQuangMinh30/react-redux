@@ -8,7 +8,9 @@ import {
 } from "../redux/actions/productsActions";
 const ProductDetails = () => {
   const { productId } = useParams();
+ 
   let product = useSelector((state) => state.product);
+  console.log("productId",useParams(),product)
   const { image, title, price, category, description } = product;
   const dispatch = useDispatch();
   const fetchProductDetail = async (id) => {
